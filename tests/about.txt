@@ -1,0 +1,1 @@
+This directory is intended to hold any 3D printer test files I come up with. These will (likely) be objects or prints that help dial-in or show defects in printing.
