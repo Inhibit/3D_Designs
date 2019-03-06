@@ -4,6 +4,8 @@ I've corrected the stand-offs so that they're now attached to the main portion o
 
 It should be printed with full supports. Printing in PLA at 20% infill created a solid working part.
 
-Version 2, should I have time to create it, will be a complete re-work with mounting brackets using the swehacker case as reference for the openings.
+Mark 2 is now up and the original "fixed" case is marked as derivative should you need it. 
 
 03/04/19: Added in modified case for the 800023 daughterboard with control buttons
+
+03/06/19: Replaced daughterboard case with the Mk2 variant that uses clips to hold on the display bezel.
