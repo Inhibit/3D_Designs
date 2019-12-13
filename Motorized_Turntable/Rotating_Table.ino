@@ -11,7 +11,7 @@
  *  
  *  This program requires:
  *  AccelStepper: https://www.airspayce.com/mikem/arduino/AccelStepper/
- *  LiquidCrystal: https://www.arduino.cc/en/Reference/LiquidCrystal
+ *  LiquidCrystal:  https://www.arduino.cc/en/Reference/LiquidCrystal
  *  
  *  Rotating Table Versions
  *  v1.0  19/12/13  Initial stepper driver code for the rotating table
