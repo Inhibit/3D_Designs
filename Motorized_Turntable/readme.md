@@ -4,6 +4,8 @@ It was also re-implemented in Sketchup. I can post the Sketchup files as well if
 
 You can find it in the Prusa Printing repository: https://www.prusaprinters.org/prints/13776-photo-turntable-motorized-608-bearing and Thingiverse: https://www.thingiverse.com/thing:4037914
 
+There's also a build video and walk-through on YouTube: https://youtu.be/Fnc5LVbg8Z8 and a companion article on PCBurn https://pcburn.com/motorized-turntable-for-video-photo-and-3d-scanning-diy/
+
 It's based on a design by Silent Bob that can be found on Thingiverse: https://www.thingiverse.com/thing:1826589
 
 Changelog:
