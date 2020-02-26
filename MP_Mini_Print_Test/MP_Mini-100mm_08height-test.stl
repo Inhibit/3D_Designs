@@ -1,0 +1,86 @@
+solid MP_Mini-100mm_06height-test
+facet normal 0.0 0.0 -1.0
+outer loop
+vertex 100.0 100.0 0.0
+vertex 0.0 0.0 0.0
+vertex 0.0 100.0 0.0
+endloop
+endfacet
+facet normal 0.0 0.0 -1.0
+outer loop
+vertex 0.0 0.0 0.0
+vertex 100.0 100.0 0.0
+vertex 100.0 0.0 0.0
+endloop
+endfacet
+facet normal 0.0 0.0 1.0
+outer loop
+vertex 100.0 0.0 0.7999999999999999
+vertex 0.0 100.0 0.7999999999999999
+vertex 0.0 0.0 0.7999999999999999
+endloop
+endfacet
+facet normal 0.0 0.0 1.0
+outer loop
+vertex 0.0 100.0 0.7999999999999999
+vertex 100.0 0.0 0.7999999999999999
+vertex 100.0 100.0 0.7999999999999999
+endloop
+endfacet
+facet normal -1.0 0.0 0.0
+outer loop
+vertex 0.0 100.0 0.7999999999999999
+vertex 0.0 0.0 0.0
+vertex 0.0 0.0 0.7999999999999999
+endloop
+endfacet
+facet normal -1.0 0.0 0.0
+outer loop
+vertex 0.0 0.0 0.0
+vertex 0.0 100.0 0.7999999999999999
+vertex 0.0 100.0 0.0
+endloop
+endfacet
+facet normal -0.0 1.0 0.0
+outer loop
+vertex 0.0 100.0 0.7999999999999999
+vertex 100.0 100.0 0.0
+vertex 0.0 100.0 0.0
+endloop
+endfacet
+facet normal -0.0 1.0 0.0
+outer loop
+vertex 100.0 100.0 0.0
+vertex 0.0 100.0 0.7999999999999999
+vertex 100.0 100.0 0.7999999999999999
+endloop
+endfacet
+facet normal 1.0 0.0 0.0
+outer loop
+vertex 100.0 100.0 0.0
+vertex 100.0 0.0 0.7999999999999999
+vertex 100.0 0.0 0.0
+endloop
+endfacet
+facet normal 1.0 0.0 0.0
+outer loop
+vertex 100.0 0.0 0.7999999999999999
+vertex 100.0 100.0 0.0
+vertex 100.0 100.0 0.7999999999999999
+endloop
+endfacet
+facet normal -0.0 -1.0 -0.0
+outer loop
+vertex 100.0 0.0 0.7999999999999999
+vertex 0.0 0.0 0.0
+vertex 100.0 0.0 0.0
+endloop
+endfacet
+facet normal -0.0 -1.0 -0.0
+outer loop
+vertex 0.0 0.0 0.0
+vertex 100.0 0.0 0.7999999999999999
+vertex 0.0 0.0 0.7999999999999999
+endloop
+endfacet
+endsolid MP_Mini-100mm_06height-test
