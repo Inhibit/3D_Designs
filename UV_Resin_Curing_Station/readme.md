@@ -4,8 +4,8 @@ Additional information is available at:
 
 Accompanying article: https://pcburn.com/diy-uv-resin-curing-station---make-your-own-uv-resin-curer/
 
-YouTube Video:
+YouTube Video: https://youtu.be/qn-Az0mDHFQ
 
 Thingiverse page: https://www.thingiverse.com/thing:4212421
 
-Prusa Repository Page
+Prusa Repository Page:
