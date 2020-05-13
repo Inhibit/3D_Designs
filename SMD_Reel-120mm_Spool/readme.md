@@ -1,3 +1,5 @@
+![alt text](https://github.com/Inhibit/3D_Designs/blob/master/SMD_Reel-120mm_Spool/SMD_Reel_-120mm_Side_Both_Sides.png)
+
 This is a 120mm SMD Reel for spooling up your SMD parts on their plastic rolls.
 
 Features include:
