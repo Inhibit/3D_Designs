@@ -4,7 +4,7 @@ The STL files include each individual part along with a "tray" version that has 
 
 I took the liberty of renaming the file as "Hakko" the manufacturer has nothing to do with these devices aside from providing the specification for the heater cartridge tips. The original retains its name.
 
-My modifications to the backplate allow for one of the ubiquitous round power plugs and a standard nut mounted barrel jack. I've also signifigantly shortened the case as I'll be using a single barrel external power supply. I may switch that to a four prong 24v with ground at some point and add a second version of this.
+My modifications to the backplate allow for one of the ubiquitous round power switches and a standard nut mounted barrel jack. I've also signifigantly shortened the case as I'll be using a single barrel external power supply. I may switch that to a four prong 24v with ground at some point and add a second version of this.
 
 I'll add a picture of the finished case up once I've got mine built.
 
