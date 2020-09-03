@@ -6,8 +6,8 @@ Modifications by Chris @ https://pcburn.com
 
 $fn=100;
 nozzle=0.4;
-wall=nozzle*2;
-clearance=0.1;
+wall=nozzle*4;
+clearance=0;
 h=28;
 ht=3;
 hf=29.5;
@@ -57,7 +57,7 @@ module frontpanel2(){
 	h=hf-wall*2-clearance*2;
     
 	union(){
-	translate([wall,17,0])cube([x,11,wall]);
+	translate([wall,17,0])cube([x,13,wall]);
 //	translate([(x+s)/2-23.5/2,h/2-7.2,-0.5]) cube([23.5,14.4,wall+1]);
     difference(){  
     translate([(x+s)/2-22.5/2-23.25+wall+clearance,13,0]) cube([13-clearance*2,7,wall]);  
@@ -68,8 +68,8 @@ module frontpanel2(){
     translate([(x+s)/2+22.5/2+12.05+wall+clearance,13,0]) cube([8-clearance*2,7,wall]);    
 	translate([(x+s)/2+22.5/2+16.05+wall,h/2-3,-0.5]) cylinder(d=8, h=wall+1);
   }
-  translate([51,28,-wall]) rotate([90,0,0]) border_support(h/2-3);
-translate([26,28,-wall]) rotate([90,0,0]) cube([wall,wall*2,h/2-3]);
+// translate([51,28,-wall]) rotate([90,0,0]) border_support(h/2-3);
+//  translate([26,28,-wall]) rotate([90,0,0]) cube([wall,wall*2,h/2-3]);
 	}
 }
 module rearpanel(){
@@ -99,22 +99,22 @@ difference(){
         }
 //top support screw
 		hull(){
-		translate([wall+8/2,y-wall*3-8/2,0]) cylinder(d=8, h=h);
-		translate([0,y-wall*3-8,0]) cube([wall,8,h]);
-		translate([wall,y-wall*3,0]) cube([8,wall,h]);
+            translate([wall+8/2,y-wall*3-8/2,0]) cylinder(d=8, h=h);
+            translate([0,y-wall*3-8,0]) cube([wall,8,h]);
+            translate([wall,y-wall*3,0]) cube([8,wall,h]);
 		}
 		hull(){
-		translate([x-wall-8/2,y-wall*3-8/2,0]) cylinder(d=8, h=h);
-		translate([x-wall,y-wall*3-8,0]) cube([wall,8,h]);
-		translate([x-wall-8,y-wall*3,0]) cube([8,wall,h]);
+            translate([x-wall-8/2,y-wall*3-8/2,0]) cylinder(d=8, h=h);
+            translate([x-wall,y-wall*3-8,0]) cube([wall,8,h]);
+            translate([x-wall-8,y-wall*3,0]) cube([8,wall,h]);
 		}
 		hull(){
-		translate([wall+8/2,sm+wall*3+8/2,0]) cylinder(d=8, h=h);
-		translate([0,sm+wall*3,0]) cube([wall,8,h]);
+            translate([wall+8/2,sm+wall*3+8/2,0]) cylinder(d=8, h=h);
+            translate([0,sm+wall*3,0]) cube([wall,8,h]);
 		}
 		hull(){
-		translate([x-wall-8/2,sm+wall*3+8/2,0]) cylinder(d=8, h=h);
-		translate([x-wall,sm+wall*3,0]) cube([wall,8,h]);
+            translate([x-wall-8/2,sm+wall*3+8/2,0]) cylinder(d=8, h=h);
+            translate([x-wall,sm+wall*3,0]) cube([wall,8,h]);
 		}
 	}
 	//front
@@ -125,10 +125,12 @@ difference(){
 	translate([wall+8,y-wall*4,wall*2]) cube([x-wall*2-16,wall*5,h]);
 	translate([wall,y-wall*2-clearance*2,wall]) cube([x-wall*2,wall+clearance*2,h+wall]);
 //screw support for power supply
-	translate([x/2+4,y-powersupply_y,1]) cylinder(d=2.8, h=4+wall);
-	translate([x/2-23,y-powersupply_y-30,1]) cylinder(d=2.8, h=4+wall);
-	translate([x/2+2,y-powersupply_y-120,1]) cylinder(d=2.8, h=4+wall);
-	//translate([x/2+47.22/2,y-powersupply_y-98,0.2]) cylinder(d=2.8, h=4+wall);
+    if (psu_mounts_on) {
+        translate([x/2+4,y-powersupply_y,1]) cylinder(d=2.8, h=4+wall);
+        translate([x/2-23,y-powersupply_y-30,1]) cylinder(d=2.8, h=4+wall);
+        translate([x/2+2,y-powersupply_y-120,1]) cylinder(d=2.8, h=4+wall);
+        //translate([x/2+47.22/2,y-powersupply_y-98,0.2]) cylinder(d=2.8, h=4+wall);
+    }
 //top screw
 	translate([wall+8/2,y-wall*3-8/2,10]) cylinder(d=3, h=h);
 	translate([x-wall-8/2,y-wall*3-8/2,10]) cylinder(d=3, h=h);
@@ -141,6 +143,10 @@ difference(){
 //	translate([x-wall-8/2,15+wall*3+8/2,-2]) cylinder(d=6, h=h/2);
 }
 
+
+}
+
+module support_bottom(){
 //support with top
 translate([wall,y/4-wall*3,0]) rotate([0,0,0]) border_support(h);
 translate([wall,y/4*2-wall*3,0]) rotate([0,0,0]) border_support(h);
@@ -211,5 +217,7 @@ if (top_on) {
     rotate([0,180,0]) translate([-x,0,-45]) top();
 }
 if (bottom_on) {
-    bottom();
+    union() {
+        bottom();
+    }
 }
