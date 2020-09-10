@@ -6,6 +6,8 @@ I took the liberty of renaming the file as "Hakko" the manufacturer has nothing 
 
 My modifications to the backplate allow for one of the ubiquitous round power switches and a standard nut mounted barrel jack. I've also signifigantly shortened the case as I'll be using a single barrel external power supply. I may switch that to a four prong 24v with ground at some point and add a second version of this.
 
+Unforunately the original design broke horribly when I modified the dimensions. I'm not sure exactly what happened there but the OpenSCAD file will require cleanup should you want to change the settings and have it create the box based entirely on the values in the variables. I do like the design; if I get the chance I'll update it again.
+
 I'll add a picture of the finished case up once I've got mine built.
 
 You may find also find alex_at's original at Thingiverse: https://www.thingiverse.com/thing:2821134/files
