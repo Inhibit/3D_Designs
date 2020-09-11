@@ -16,6 +16,10 @@ x=77;
 y=80; // Depth; 160 in original
 s=2;
 powersupply_y=19;
+power_socket_d=11.5;
+onoff_d=21;
+
+reduce_rearpanel_w=0.5; // Fudge factor for rear panel width
 
 /* added in option for printing parts */
 
@@ -69,12 +73,13 @@ module frontpanel2() {
     }
 }
 module rearpanel() {
-    width_cube=x-wall*2;
+    width_cube=(x-wall*2)-reduce_rearpanel_w;
     depth_cube=hf-wall*2;
         difference() {
-            color([1,0,1,1]) cube([width_cube,depth_cube,wall]);
-            translate([25,15-wall,0]) cylinder(h=wall,d=21,center=false);
-            translate([50,15-wall,0]) cylinder(h=wall,d=9,center=false);
+            color([1,0,1,1]) translate([reduce_rearpanel_w/2,0,0]) cube([width_cube,depth_cube,wall]);
+            translate([20-(reduce_rearpanel_w/2),15-wall,0]) cylinder(h=wall,d=onoff_d,center=false);
+            translate([50-(reduce_rearpanel_w/2),15-wall,0]) cylinder(h=wall,d=power_socket_d,center=false);
+            translate([20-(reduce_rearpanel_w/2)-(onoff_d/2)-0.9,15-wall,1]) cube(2,true);
         }
 }
 
