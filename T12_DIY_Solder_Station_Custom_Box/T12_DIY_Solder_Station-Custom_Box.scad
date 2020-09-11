@@ -20,11 +20,11 @@ powersupply_y=19;
 /* added in option for printing parts */
 
 // Print Base
-bottom_on=0;
+bottom_on=1;
 // Print Top
 top_on=0;
 // Print Back
-back_on=1;
+back_on=0;
 // PSU Mounts
 psu_mounts_on=0;
 
@@ -69,12 +69,12 @@ module frontpanel2() {
     }
 }
 module rearpanel() {
-    width_cube=x-wall*2*2-1;
+    width_cube=x-wall*2;
     depth_cube=hf-wall*2;
         difference() {
             color([1,0,1,1]) cube([width_cube,depth_cube,wall]);
-            translate([25,15-pocket,0]) cylinder(h=wall,d=21,center=false);
-            translate([50,15-pocket,0]) cylinder(h=wall,d=9,center=false);
+            translate([25,15-wall,0]) cylinder(h=wall,d=21,center=false);
+            translate([50,15-wall,0]) cylinder(h=wall,d=9,center=false);
         }
 }
 
@@ -193,7 +193,7 @@ module top() {
 
 if (back_on) {
     render() {
-        rotate([90,180,0]) translate([wall-x,-wall-hf,+wall-y]) rearpanel();
+        rotate([90,180,0]) translate([wall-x,-hf,+wall-y]) rearpanel();
     }
 }
 if (top_on) {
