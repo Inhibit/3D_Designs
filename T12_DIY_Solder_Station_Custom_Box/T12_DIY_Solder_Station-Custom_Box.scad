@@ -16,15 +16,16 @@ x=77;
 y=80; // Depth; 160 in original
 s=2;
 powersupply_y=19;
+pocket=0.5; // Internal pocket dimension, currently for rear panel
 
 /* added in option for printing parts */
 
 // Print Base
 bottom_on=0;
 // Print Top
-top_on=1;
+top_on=0;
 // Print Back
-back_on=0;
+back_on=1;
 // PSU Mounts
 psu_mounts_on=0;
 
@@ -70,8 +71,7 @@ module frontpanel2() {
 }
 module rearpanel() {
     width_cube=x-wall*2-clearance*2-1;
-    depth_cube=hf-clearance*2+wall;
-    
+    depth_cube=hf-pocket*2;
         difference() {
             color([1,0,1,1]) cube([width_cube,depth_cube,wall]);
             translate([25,15,0]) cylinder(h=wall,d=21,center=false);
@@ -193,13 +193,17 @@ module top() {
 }
 
 if (back_on) {
-    rotate([90,180,0]) translate([wall-x,-wall-hf,+wall-y])  rearpanel();
+    render() {
+        rotate([90,180,0]) translate([wall-x,-wall-hf,+wall-y]) rearpanel();
+    }
 }
 if (top_on) {
-    rotate([0,180,0]) translate([-x,0,-45]) top();
+    render() {
+        rotate([0,180,0]) translate([-x,0,-45]) top();
+    }
 }
 if (bottom_on) {
-    union() {
+    render() {
         bottom();
     }
 }
