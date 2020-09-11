@@ -16,7 +16,6 @@ x=77;
 y=80; // Depth; 160 in original
 s=2;
 powersupply_y=19;
-pocket=0.5; // Internal pocket dimension, currently for rear panel
 
 /* added in option for printing parts */
 
@@ -70,12 +69,12 @@ module frontpanel2() {
     }
 }
 module rearpanel() {
-    width_cube=x-wall*2-clearance*2-1;
-    depth_cube=hf-pocket*2;
+    width_cube=x-wall*2*2-1;
+    depth_cube=hf-wall*2;
         difference() {
             color([1,0,1,1]) cube([width_cube,depth_cube,wall]);
-            translate([25,15,0]) cylinder(h=wall,d=21,center=false);
-            translate([50,15,0]) cylinder(h=wall,d=9,center=false);
+            translate([25,15-pocket,0]) cylinder(h=wall,d=21,center=false);
+            translate([50,15-pocket,0]) cylinder(h=wall,d=9,center=false);
         }
 }
 
